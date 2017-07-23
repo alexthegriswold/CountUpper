@@ -14,6 +14,8 @@
 		5070D0471F1BC04100CE7E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070D0451F1BC04100CE7E90 /* LaunchScreen.storyboard */; };
 		5070D0521F1BC04100CE7E90 /* CountUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D0511F1BC04100CE7E90 /* CountUpTests.swift */; };
 		5070D05D1F1BC04100CE7E90 /* CountUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D05C1F1BC04100CE7E90 /* CountUpUITests.swift */; };
+		50972B021F1BC3440067B2CE /* RealmNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50972B011F1BC3440067B2CE /* RealmNumber.swift */; };
+		994F88346B4854417EC38B0F /* Pods_CountUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF039A072477FE1CFD67735 /* Pods_CountUp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03054B729A172645E4EC142C /* Pods-CountUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountUp/Pods-CountUp.release.xcconfig"; sourceTree = "<group>"; };
 		5070D0391F1BC04100CE7E90 /* CountUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5070D03E1F1BC04100CE7E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		5070D0581F1BC04100CE7E90 /* CountUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070D05C1F1BC04100CE7E90 /* CountUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpUITests.swift; sourceTree = "<group>"; };
 		5070D05E1F1BC04100CE7E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50972B011F1BC3440067B2CE /* RealmNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNumber.swift; sourceTree = "<group>"; };
+		DAB54E81E3728B196DDDAC65 /* Pods-CountUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountUp/Pods-CountUp.debug.xcconfig"; sourceTree = "<group>"; };
+		FAF039A072477FE1CFD67735 /* Pods_CountUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994F88346B4854417EC38B0F /* Pods_CountUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12E43186436ABF74045F46A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAB54E81E3728B196DDDAC65 /* Pods-CountUp.debug.xcconfig */,
+				03054B729A172645E4EC142C /* Pods-CountUp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5070D0301F1BC04000CE7E90 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +97,8 @@
 				5070D0501F1BC04100CE7E90 /* CountUpTests */,
 				5070D05B1F1BC04100CE7E90 /* CountUpUITests */,
 				5070D03A1F1BC04100CE7E90 /* Products */,
+				12E43186436ABF74045F46A1 /* Pods */,
+				92CF1872F5D9A6FF6D47CF31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +117,7 @@
 			children = (
 				5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */,
 				5070D03E1F1BC04100CE7E90 /* ViewController.swift */,
+				50972B011F1BC3440067B2CE /* RealmNumber.swift */,
 				5070D0401F1BC04100CE7E90 /* Main.storyboard */,
 				5070D0431F1BC04100CE7E90 /* Assets.xcassets */,
 				5070D0451F1BC04100CE7E90 /* LaunchScreen.storyboard */,
@@ -125,6 +144,14 @@
 			path = CountUpUITests;
 			sourceTree = "<group>";
 		};
+		92CF1872F5D9A6FF6D47CF31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF039A072477FE1CFD67735 /* Pods_CountUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5070D0611F1BC04100CE7E90 /* Build configuration list for PBXNativeTarget "CountUp" */;
 			buildPhases = (
+				410A510F0EC3F1315D69C21D /* [CP] Check Pods Manifest.lock */,
 				5070D0351F1BC04000CE7E90 /* Sources */,
 				5070D0361F1BC04000CE7E90 /* Frameworks */,
 				5070D0371F1BC04000CE7E90 /* Resources */,
+				0C78B79A02E1A4F03270E0C5 /* [CP] Embed Pods Frameworks */,
+				4DC93B72B05F539E2EA04E35 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,12 +287,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C78B79A02E1A4F03270E0C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountUp/Pods-CountUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		410A510F0EC3F1315D69C21D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DC93B72B05F539E2EA04E35 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountUp/Pods-CountUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5070D0351F1BC04000CE7E90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5070D03F1F1BC04100CE7E90 /* ViewController.swift in Sources */,
+				50972B021F1BC3440067B2CE /* RealmNumber.swift in Sources */,
 				5070D03D1F1BC04100CE7E90 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,27 +492,31 @@
 		};
 		5070D0621F1BC04100CE7E90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAB54E81E3728B196DDDAC65 /* Pods-CountUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = CountUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUp;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5070D0631F1BC04100CE7E90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03054B729A172645E4EC142C /* Pods-CountUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = CountUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUp;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -514,6 +597,7 @@
 				5070D0631F1BC04100CE7E90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5070D0641F1BC04100CE7E90 /* Build configuration list for PBXNativeTarget "CountUpTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +606,7 @@
 				5070D0661F1BC04100CE7E90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5070D0671F1BC04100CE7E90 /* Build configuration list for PBXNativeTarget "CountUpUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +615,7 @@
 				5070D0691F1BC04100CE7E90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
