@@ -21,98 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-Lx-bJW">
-                                <rect key="frame" x="27.5" y="225" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="521949658.85478002">
-                                    <!--2017-07-17 02:00:58 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-Ff-gxO">
-                                <rect key="frame" x="68.5" y="449" width="237" height="66"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="45"/>
-                                <state key="normal" title="Submit Date">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitDatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kl-Mi-hl7"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days since" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luy-d1-DyM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Days since" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luy-d1-DyM">
                                 <rect key="frame" x="52.5" y="148.5" width="271" height="68.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="57"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-L7-wht">
-                                <rect key="frame" x="131.5" y="213.5" width="112" height="239"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="200"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egm-5K-e7I">
-                                <rect key="frame" x="60" y="449" width="255" height="45"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jk-n1-0VD">
-                                        <rect key="frame" x="14" y="6" width="67" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Seconds">
-                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="secondsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M6p-2a-JiD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz1-Ql-Lh0">
-                                        <rect key="frame" x="86" y="6" width="61" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Minutes">
-                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="minutesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqQ-j8-rre"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFg-ja-Hzd">
-                                        <rect key="frame" x="152" y="6" width="46" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Hours">
-                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="hoursPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RDb-Gq-Z9W"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-Wd-ZVr">
-                                        <rect key="frame" x="203" y="6" width="38" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Days">
-                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="daysPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cfu-Ja-tV9"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="eV9-Wd-ZVr" firstAttribute="top" secondItem="Egm-5K-e7I" secondAttribute="top" constant="6" id="1lf-5f-gsb"/>
-                                    <constraint firstAttribute="trailing" secondItem="eV9-Wd-ZVr" secondAttribute="trailing" constant="14" id="26B-R8-fTa"/>
-                                    <constraint firstItem="cz1-Ql-Lh0" firstAttribute="top" secondItem="Egm-5K-e7I" secondAttribute="top" constant="6" id="4x6-uF-n7l"/>
-                                    <constraint firstItem="5jk-n1-0VD" firstAttribute="leading" secondItem="Egm-5K-e7I" secondAttribute="leading" constant="14" id="7wN-Ij-kAY"/>
-                                    <constraint firstItem="cz1-Ql-Lh0" firstAttribute="leading" secondItem="5jk-n1-0VD" secondAttribute="trailing" constant="5" id="9cm-L0-1Ai"/>
-                                    <constraint firstItem="hFg-ja-Hzd" firstAttribute="leading" secondItem="cz1-Ql-Lh0" secondAttribute="trailing" constant="5" id="TRS-IL-224"/>
-                                    <constraint firstItem="eV9-Wd-ZVr" firstAttribute="leading" secondItem="hFg-ja-Hzd" secondAttribute="trailing" constant="5" id="TcE-DO-Obk"/>
-                                    <constraint firstItem="hFg-ja-Hzd" firstAttribute="leading" secondItem="cz1-Ql-Lh0" secondAttribute="trailing" constant="5" id="VPV-UZ-9mE"/>
-                                    <constraint firstAttribute="bottom" secondItem="hFg-ja-Hzd" secondAttribute="bottom" constant="6" id="g7s-Qj-B14"/>
-                                    <constraint firstAttribute="bottom" secondItem="eV9-Wd-ZVr" secondAttribute="bottom" constant="6" id="hMV-0G-bif"/>
-                                    <constraint firstItem="eV9-Wd-ZVr" firstAttribute="leading" secondItem="hFg-ja-Hzd" secondAttribute="trailing" constant="5" id="hXB-DH-tN8"/>
-                                    <constraint firstItem="5jk-n1-0VD" firstAttribute="top" secondItem="Egm-5K-e7I" secondAttribute="top" constant="6" id="irx-I1-gxN"/>
-                                    <constraint firstItem="cz1-Ql-Lh0" firstAttribute="leading" secondItem="5jk-n1-0VD" secondAttribute="trailing" constant="5" id="l98-Sz-GKi"/>
-                                    <constraint firstAttribute="bottom" secondItem="5jk-n1-0VD" secondAttribute="bottom" constant="6" id="lLi-ns-o1q"/>
-                                    <constraint firstItem="hFg-ja-Hzd" firstAttribute="top" secondItem="Egm-5K-e7I" secondAttribute="top" constant="6" id="n0H-ow-Tfu"/>
-                                    <constraint firstAttribute="bottom" secondItem="cz1-Ql-Lh0" secondAttribute="bottom" constant="6" id="wrJ-uo-BO0"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-UF-4ky">
                                 <rect key="frame" x="165" y="547" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,24 +38,99 @@
                                     <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3j-dM-73t"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-Lx-bJW">
+                                <rect key="frame" x="27" y="225" width="320" height="215"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="521949658.85478002">
+                                    <!--2017-07-17 02:00:58 +0000-->
+                                </date>
+                            </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egm-5K-e7I">
+                                <rect key="frame" x="60" y="461" width="255" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jk-n1-0VD">
+                                        <rect key="frame" x="94" y="18" width="67" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Seconds">
+                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M6p-2a-JiD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz1-Ql-Lh0">
+                                        <rect key="frame" x="97" y="18" width="61" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Minutes">
+                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="minutesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqQ-j8-rre"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFg-ja-Hzd">
+                                        <rect key="frame" x="104" y="18" width="46" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Hours">
+                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hoursPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RDb-Gq-Z9W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-Wd-ZVr">
+                                        <rect key="frame" x="108" y="18" width="38" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Days">
+                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="daysPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cfu-Ja-tV9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-Ff-gxO">
+                                        <rect key="frame" x="8" y="4" width="237" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="45"/>
+                                        <state key="normal" title="Submit Date">
+                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitDatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kl-Mi-hl7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="LKH-Of-EC6"/>
+                                    <constraint firstAttribute="height" constant="70" id="aRR-4x-ByT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-L7-wht">
+                                <rect key="frame" x="132" y="214" width="112" height="239"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="200"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.85098039215686272" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Egm-5K-e7I" firstAttribute="top" secondItem="TRS-Lx-bJW" secondAttribute="bottom" constant="8" id="2ol-vG-njn"/>
-                            <constraint firstItem="TRS-Lx-bJW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5DN-ZJ-2Jh"/>
-                            <constraint firstItem="TRS-Lx-bJW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6rM-pu-DUO"/>
-                            <constraint firstItem="5aT-L7-wht" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Zt-op-kRg"/>
-                            <constraint firstItem="Mil-Ff-gxO" firstAttribute="top" secondItem="TRS-Lx-bJW" secondAttribute="bottom" constant="8" id="Baq-D7-mNb"/>
-                            <constraint firstItem="Mil-Ff-gxO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CIS-UL-gHR"/>
-                            <constraint firstItem="5aT-L7-wht" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LLR-6s-cCd"/>
-                            <constraint firstItem="Egm-5K-e7I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gnr-Ia-EXL"/>
-                            <constraint firstItem="Luy-d1-DyM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhf-ld-JTP"/>
-                            <constraint firstItem="TRS-Lx-bJW" firstAttribute="top" secondItem="Luy-d1-DyM" secondAttribute="bottom" constant="8" id="tf4-cf-TFC"/>
+                            <constraint firstItem="5aT-L7-wht" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1iO-qa-iEP"/>
+                            <constraint firstItem="5aT-L7-wht" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8SJ-iJ-dJp"/>
+                            <constraint firstItem="Egm-5K-e7I" firstAttribute="top" secondItem="5aT-L7-wht" secondAttribute="bottom" constant="8" id="CkX-xb-6TE"/>
+                            <constraint firstItem="Egm-5K-e7I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M0O-ON-w2d"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonView" destination="Egm-5K-e7I" id="iYh-5q-8Dc"/>
+                        <outlet property="buttonViewHeight" destination="aRR-4x-ByT" id="Eez-Yu-iLe"/>
+                        <outlet property="buttonViewVerticalSpacing" destination="CkX-xb-6TE" id="wbh-iL-1hu"/>
+                        <outlet property="buttonViewWidth" destination="LKH-Of-EC6" id="UkK-l0-K5G"/>
                         <outlet property="datePicker" destination="TRS-Lx-bJW" id="vYJ-Pr-yMO"/>
                         <outlet property="daysButton" destination="eV9-Wd-ZVr" id="e6O-hI-iGL"/>
                         <outlet property="daysLabel" destination="Luy-d1-DyM" id="11X-Os-eKK"/>

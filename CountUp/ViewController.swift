@@ -23,6 +23,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var hoursButton: UIButton!
     @IBOutlet weak var daysButton: UIButton!
     
+    @IBOutlet weak var buttonViewWidth: NSLayoutConstraint!
+    
+    @IBOutlet weak var buttonViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var buttonViewVerticalSpacing: NSLayoutConstraint!
+    
+    
     
     //persist stuff
     let realm = try! Realm()
@@ -44,10 +51,35 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
+        
+        
+        
+        
+        
         //add curved edges to button view
         buttonView.layer.cornerRadius = buttonView.frame.width * 0.05
         
-        setButtonViewAlpha(alpha: 0)
+        daysLabel.isHidden = true
+        submitDate.isHidden = true
+        numberCounter.isHidden = true
+        
+        //numberCounter.alpha = 1
+        datePicker.isHidden = true
+        secondsButton.isHidden = true
+        minutesButton.isHidden = true
+        hoursButton.isHidden = true
+        daysButton.isHidden = true
+        
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.buttonViewHeight = 
+        })
+        
+        
+        
+        /*
+        //setButtonViewAlpha(alpha: 0)
         
         fontReducer.reduceLabelFontSize(label: numberCounter)
         
@@ -87,12 +119,12 @@ class ViewController: UIViewController {
         }
         
 
-        
+        */
         
         
         
  
-        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.count), userInfo: nil, repeats: true)
+        //_ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.count), userInfo: nil, repeats: true)
     }
     
     func hideButtonPanel() {
