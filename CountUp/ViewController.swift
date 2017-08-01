@@ -25,11 +25,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buttonViewWidth: NSLayoutConstraint!
     
-    @IBOutlet weak var buttonViewHeight: NSLayoutConstraint!
-    
-    @IBOutlet weak var buttonViewVerticalSpacing: NSLayoutConstraint!
+    @IBOutlet var buttonViewVerticalSpacing: NSLayoutConstraint!
     
     
+   
+    
+    
+    @IBOutlet var buttonViewHeight: NSLayoutConstraint!
     
     //persist stuff
     let realm = try! Realm()
@@ -79,6 +81,23 @@ class ViewController: UIViewController {
         })
         */
         
+       
+        let when = DispatchTime.now() + 5// change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.buttonViewHeight.isActive = false
+            self.buttonViewVerticalSpacing.isActive = false
+            UIView.animate(withDuration: 0.3, delay: 0, options: [], animations: {
+                self.buttonView.frame.size.height = 46
+                self.buttonView.frame.origin.y += 12
+            }, completion: {(finished: Bool) in
+                self.buttonViewVerticalSpacing.constant = 20
+                self.buttonViewVerticalSpacing.isActive = true
+                self.buttonViewHeight.constant = 46
+                self.buttonViewHeight.isActive = true
+                
+                
+            })
+        }
         
         /*
         //setButtonViewAlpha(alpha: 0)

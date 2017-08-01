@@ -128,8 +128,8 @@
                     </view>
                     <connections>
                         <outlet property="buttonView" destination="Egm-5K-e7I" id="iYh-5q-8Dc"/>
-                        <outlet property="buttonViewHeight" destination="aRR-4x-ByT" id="Eez-Yu-iLe"/>
-                        <outlet property="buttonViewVerticalSpacing" destination="CkX-xb-6TE" id="wbh-iL-1hu"/>
+                        <outlet property="buttonViewHeight" destination="aRR-4x-ByT" id="44S-Ia-DYo"/>
+                        <outlet property="buttonViewVerticalSpacing" destination="CkX-xb-6TE" id="3RZ-WZ-tRb"/>
                         <outlet property="buttonViewWidth" destination="LKH-Of-EC6" id="UkK-l0-K5G"/>
                         <outlet property="datePicker" destination="TRS-Lx-bJW" id="vYJ-Pr-yMO"/>
                         <outlet property="daysButton" destination="eV9-Wd-ZVr" id="e6O-hI-iGL"/>
