@@ -75,18 +75,11 @@ class ViewController: UIViewController {
         
         
         
-        /*
-        UIView.animate(withDuration: 0.5, animations: {
-            self.buttonViewHeight = 
-        })
-        */
-        
-       
-        let when = DispatchTime.now() + 5// change 2 to desired number of seconds
+        let when = DispatchTime.now() + 1// change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.buttonViewHeight.isActive = false
             self.buttonViewVerticalSpacing.isActive = false
-            UIView.animate(withDuration: 0.3, delay: 0, options: [], animations: {
+            UIView.animate(withDuration: 0.2, delay: 0, options: [], animations: {
                 self.buttonView.frame.size.height = 46
                 self.buttonView.frame.origin.y += 12
             }, completion: {(finished: Bool) in
