@@ -72,10 +72,12 @@ class ViewController: UIViewController {
         daysButton.isHidden = true
         
         
+        
+        /*
         UIView.animate(withDuration: 0.5, animations: {
             self.buttonViewHeight = 
         })
-        
+        */
         
         
         /*
