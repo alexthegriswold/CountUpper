@@ -17,21 +17,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitDate: UIButton!
     @IBOutlet weak var numberCounter: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var buttonView: UIView!
+
     @IBOutlet weak var secondsButton: UIButton!
     @IBOutlet weak var minutesButton: UIButton!
     @IBOutlet weak var hoursButton: UIButton!
     @IBOutlet weak var daysButton: UIButton!
     
-    @IBOutlet weak var buttonViewWidth: NSLayoutConstraint!
-    
-    @IBOutlet var buttonViewVerticalSpacing: NSLayoutConstraint!
-    
-    
-   
-    
-    
+    @IBOutlet var buttonView: UIView!
+    @IBOutlet var buttonViewWidth: NSLayoutConstraint!
+
     @IBOutlet var buttonViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet var buttonViewTop: NSLayoutConstraint!
+    
+    @IBOutlet var secondsButtonLeft: NSLayoutConstraint!
+    
+    @IBOutlet var submitDateTop: NSLayoutConstraint!
+    
+    @IBOutlet var submitDateLeft: NSLayoutConstraint!
+    
+    @IBOutlet var submitDateLabel: UILabel!
     
     //persist stuff
     let realm = try! Realm()
@@ -53,40 +58,59 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        buttonView.layer.cornerRadius = buttonView.frame.size.height * 0.09
+        setButtonViewAlpha(alpha: 0)
         
         
+        /*
+        UIView.animate(withDuration: 0.75, animations: {
+            self.submitDate.alpha = 0
+            self.datePicker.alpha = 0
+        })
         
-        
-        
-        
-        //add curved edges to button view
-        buttonView.layer.cornerRadius = buttonView.frame.width * 0.05
-        
-        daysLabel.isHidden = true
-        submitDate.isHidden = true
-        numberCounter.isHidden = true
-        
-        //numberCounter.alpha = 1
-        datePicker.isHidden = true
-        secondsButton.isHidden = true
-        minutesButton.isHidden = true
-        hoursButton.isHidden = true
-        daysButton.isHidden = true
-        
+        */
+        daysLabel.alpha = 0
+        numberCounter.alpha = 0
+        submitDateLabel.alpha = 0
         
         
         let when = DispatchTime.now() + 1// change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
-            self.buttonViewHeight.isActive = false
-            self.buttonViewVerticalSpacing.isActive = false
-            UIView.animate(withDuration: 0.2, delay: 0, options: [], animations: {
-                self.buttonView.frame.size.height = 46
-                self.buttonView.frame.origin.y += 12
+            
+            self.submitDate.alpha = 0
+            self.submitDateLabel.alpha = 1
+
+            UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {
+               
+                self.buttonView.frame.size.width = 241
+                self.buttonView.frame.size.height = 49
+                self.buttonView.frame.origin.y += 13
+                self.buttonView.frame.origin.x += 19.5
+                self.submitDateLabel.alpha = 0
+                self.datePicker.alpha = 0
+                
             }, completion: {(finished: Bool) in
-                self.buttonViewVerticalSpacing.constant = 20
-                self.buttonViewVerticalSpacing.isActive = true
-                self.buttonViewHeight.constant = 46
-                self.buttonViewHeight.isActive = true
+                
+                
+                
+                self.buttonViewHeight.constant = 49
+                self.buttonViewWidth.constant = 241
+                self.buttonViewTop.constant = 33
+                self.moveTimeButtonsFoward(amountFoward: -250)
+                self.setButtonViewAlpha(alpha: 1)
+                
+                UIView.animate(withDuration: 0.5, animations: {
+                    
+                    
+                    self.moveTimeButtonsFoward(amountFoward: 250)
+                    self.daysLabel.alpha = 1
+                    self.numberCounter.alpha = 1
+                    
+                }, completion: {(finished: Bool) in
+                    
+                    self.secondsButtonLeft.constant = 8
+                    
+                })
                 
                 
             })
@@ -141,6 +165,16 @@ class ViewController: UIViewController {
         //_ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.count), userInfo: nil, repeats: true)
     }
     
+    
+    func moveTimeButtonsFoward(amountFoward: CGFloat) {
+        self.secondsButton.frame.origin.x += amountFoward
+        self.minutesButton.frame.origin.x += amountFoward
+        self.hoursButton.frame.origin.x += amountFoward
+        self.daysButton.frame.origin.x += amountFoward
+    }
+    
+    
+    
     func hideButtonPanel() {
         
     }
@@ -150,7 +184,6 @@ class ViewController: UIViewController {
         minutesButton.alpha = alpha
         hoursButton.alpha = alpha
         daysButton.alpha = alpha
-        buttonView.alpha = alpha
     }
     
     
