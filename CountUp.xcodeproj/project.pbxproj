@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5023CDE81F396304008CDF1F /* FontReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5023CDE71F396304008CDF1F /* FontReducer.swift */; };
 		5070D03D1F1BC04100CE7E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */; };
 		5070D03F1F1BC04100CE7E90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D03E1F1BC04100CE7E90 /* ViewController.swift */; };
 		5070D0421F1BC04100CE7E90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070D0401F1BC04100CE7E90 /* Main.storyboard */; };
@@ -38,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		03054B729A172645E4EC142C /* Pods-CountUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountUp/Pods-CountUp.release.xcconfig"; sourceTree = "<group>"; };
-		5023CDE71F396304008CDF1F /* FontReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontReducer.swift; sourceTree = "<group>"; };
 		5070D0391F1BC04100CE7E90 /* CountUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5070D03E1F1BC04100CE7E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				5070D0431F1BC04100CE7E90 /* Assets.xcassets */,
 				5070D0451F1BC04100CE7E90 /* LaunchScreen.storyboard */,
 				5070D0481F1BC04100CE7E90 /* Info.plist */,
-				5023CDE71F396304008CDF1F /* FontReducer.swift */,
 			);
 			path = CountUp;
 			sourceTree = "<group>";
@@ -344,7 +341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5070D03F1F1BC04100CE7E90 /* ViewController.swift in Sources */,
-				5023CDE81F396304008CDF1F /* FontReducer.swift in Sources */,
 				50972B021F1BC3440067B2CE /* RealmNumber.swift in Sources */,
 				5070D03D1F1BC04100CE7E90 /* AppDelegate.swift in Sources */,
 			);
