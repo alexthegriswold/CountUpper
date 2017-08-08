@@ -21,51 +21,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days since" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luy-d1-DyM">
-                                <rect key="frame" x="52.5" y="137" width="271" height="68.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Since" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Luy-d1-DyM">
+                                <rect key="frame" x="49" y="112.5" width="277.5" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="343" id="KA7-6y-hZv"/>
+                                    <constraint firstAttribute="height" constant="68.5" id="MSb-zc-jji"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="57"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-UF-4ky">
-                                <rect key="frame" x="165" y="547" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3j-dM-73t"/>
-                                </connections>
-                            </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-Lx-bJW">
-                                <rect key="frame" x="27" y="225.5" width="320" height="216"/>
+                                <rect key="frame" x="27" y="201" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="521949658.85478002">
                                     <!--2017-07-17 02:00:58 +0000-->
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-L7-wht">
-                                <rect key="frame" x="132" y="214" width="112" height="239"/>
+                                <rect key="frame" x="16" y="189.5" width="343" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="NDB-3B-P1S"/>
+                                    <constraint firstAttribute="width" constant="343" id="e2a-Sy-kkn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="200"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8y-im-DSd" userLabel="ButtonView">
-                                <rect key="frame" x="48" y="473" width="280" height="75"/>
+                                <rect key="frame" x="48" y="448.5" width="280" height="75"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-Ff-gxO">
-                                        <rect key="frame" x="22" y="5" width="236" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="65" id="hYa-qk-lf3"/>
-                                            <constraint firstAttribute="width" constant="236" id="spA-kt-h0n"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="44"/>
-                                        <state key="normal" title="Submit Date">
-                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="submitDatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kl-Mi-hl7"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jk-n1-0VD">
                                         <rect key="frame" x="7.5" y="21" width="67" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -110,7 +94,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="cz1-Ql-Lh0" firstAttribute="centerY" secondItem="o8y-im-DSd" secondAttribute="centerY" id="0h6-7M-pVh"/>
-                                    <constraint firstItem="Mil-Ff-gxO" firstAttribute="top" secondItem="o8y-im-DSd" secondAttribute="top" constant="5" id="4PP-pM-PBl"/>
                                     <constraint firstAttribute="width" constant="280" id="7qP-3L-U6P"/>
                                     <constraint firstItem="eV9-Wd-ZVr" firstAttribute="centerY" secondItem="o8y-im-DSd" secondAttribute="centerY" id="A61-LC-UAG"/>
                                     <constraint firstItem="eV9-Wd-ZVr" firstAttribute="leading" secondItem="hFg-ja-Hzd" secondAttribute="trailing" constant="5" id="Edc-9D-0Rf"/>
@@ -120,14 +103,13 @@
                                     <constraint firstItem="hFg-ja-Hzd" firstAttribute="leading" secondItem="cz1-Ql-Lh0" secondAttribute="trailing" constant="5" id="gBW-rQ-ivD"/>
                                     <constraint firstItem="hFg-ja-Hzd" firstAttribute="centerY" secondItem="o8y-im-DSd" secondAttribute="centerY" id="jLV-Kq-bNN"/>
                                     <constraint firstItem="hFg-ja-Hzd" firstAttribute="leading" secondItem="cz1-Ql-Lh0" secondAttribute="trailing" constant="5" id="kr3-PK-Zdh"/>
-                                    <constraint firstItem="Mil-Ff-gxO" firstAttribute="leading" secondItem="o8y-im-DSd" secondAttribute="leading" constant="22" id="or4-BT-yj5"/>
                                     <constraint firstItem="5jk-n1-0VD" firstAttribute="leading" secondItem="o8y-im-DSd" secondAttribute="leading" constant="7.5" id="qcX-g4-zpD"/>
                                     <constraint firstItem="5jk-n1-0VD" firstAttribute="centerY" secondItem="o8y-im-DSd" secondAttribute="centerY" id="s1d-9d-Enw"/>
                                     <constraint firstItem="eV9-Wd-ZVr" firstAttribute="leading" secondItem="hFg-ja-Hzd" secondAttribute="trailing" constant="5" id="u3c-gb-eHZ"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit Date " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42Y-Pp-2CH" userLabel="Submit Date Label">
-                                <rect key="frame" x="71.5" y="478" width="236" height="65"/>
+                                <rect key="frame" x="71.5" y="453.5" width="236" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="0zs-oa-wDq"/>
                                     <constraint firstAttribute="width" constant="236" id="Pfd-Jz-opg"/>
@@ -136,6 +118,43 @@
                                 <color key="textColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-Ff-gxO">
+                                <rect key="frame" x="69.5" y="453.5" width="236" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="hYa-qk-lf3"/>
+                                    <constraint firstAttribute="width" constant="236" id="spA-kt-h0n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="44"/>
+                                <state key="normal" title="Submit Date">
+                                    <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitDatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kl-Mi-hl7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-5m-H5b">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-UF-4ky">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <state key="normal" title="New Date">
+                                            <color key="titleColor" red="0.0" green="0.85098039219999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3j-dM-73t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="3k5-wP-vAM"/>
+                                    <constraint firstItem="RyE-UF-4ky" firstAttribute="leading" secondItem="hu7-5m-H5b" secondAttribute="leading" id="U75-0p-TaS"/>
+                                    <constraint firstAttribute="trailing" secondItem="RyE-UF-4ky" secondAttribute="trailing" id="cld-b3-E5N"/>
+                                    <constraint firstAttribute="height" constant="49" id="mgM-de-xFk"/>
+                                    <constraint firstAttribute="bottom" secondItem="RyE-UF-4ky" secondAttribute="bottom" id="oh6-lh-6UM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.85098039215686272" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -144,15 +163,21 @@
                             <constraint firstItem="o8y-im-DSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qj1-av-gfX"/>
                             <constraint firstItem="Luy-d1-DyM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UUT-rL-v3x"/>
                             <constraint firstItem="42Y-Pp-2CH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="WEU-63-E6e"/>
+                            <constraint firstItem="Mil-Ff-gxO" firstAttribute="top" secondItem="5aT-L7-wht" secondAttribute="bottom" constant="25" id="XTX-f9-Scz"/>
                             <constraint firstItem="5aT-L7-wht" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YHk-1b-6kl"/>
+                            <constraint firstItem="hu7-5m-H5b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ysa-ib-yfW"/>
                             <constraint firstItem="42Y-Pp-2CH" firstAttribute="top" secondItem="5aT-L7-wht" secondAttribute="bottom" constant="25" id="bUy-7x-rFY"/>
                             <constraint firstItem="TRS-Lx-bJW" firstAttribute="top" secondItem="Luy-d1-DyM" secondAttribute="bottom" constant="20" id="bg6-nf-wCl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hu7-5m-H5b" secondAttribute="bottom" id="dWH-My-8bE"/>
                             <constraint firstItem="TRS-Lx-bJW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g6H-up-SPQ"/>
-                            <constraint firstItem="TRS-Lx-bJW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qPK-Ut-8XD"/>
-                            <constraint firstItem="5aT-L7-wht" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zPh-my-xJM"/>
+                            <constraint firstAttribute="trailing" secondItem="hu7-5m-H5b" secondAttribute="trailing" id="lkQ-OJ-x6N"/>
+                            <constraint firstItem="Mil-Ff-gxO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qJG-gi-7eX"/>
+                            <constraint firstItem="TRS-Lx-bJW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-24.5" id="qPK-Ut-8XD"/>
+                            <constraint firstItem="5aT-L7-wht" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-24.5" id="zPh-my-xJM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="barButtonView" destination="hu7-5m-H5b" id="zMp-0B-LZV"/>
                         <outlet property="buttonView" destination="o8y-im-DSd" id="aQd-f5-8jo"/>
                         <outlet property="buttonViewHeight" destination="R9D-iM-RgB" id="n9b-Eg-YmC"/>
                         <outlet property="buttonViewTop" destination="AJS-ii-u1o" id="XDB-sF-6pu"/>
@@ -167,13 +192,11 @@
                         <outlet property="secondsButtonLeft" destination="qcX-g4-zpD" id="Max-of-6Ax"/>
                         <outlet property="submitDate" destination="Mil-Ff-gxO" id="GZG-7j-Xu3"/>
                         <outlet property="submitDateLabel" destination="42Y-Pp-2CH" id="EwP-1V-8lY"/>
-                        <outlet property="submitDateLeft" destination="or4-BT-yj5" id="BzY-ip-IgB"/>
-                        <outlet property="submitDateTop" destination="4PP-pM-PBl" id="wfH-gx-pfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="26"/>
+            <point key="canvasLocation" x="28" y="25.637181409295355"/>
         </scene>
     </scenes>
 </document>
