@@ -10,95 +10,77 @@ import UIKit
 import RealmSwift 
 
 class ViewController: UIViewController {
-   
+    
+    
+    
+    var buttonsLRConstant = CGFloat(250)
+    
+   //UIStuff
     @IBOutlet weak var daysLabel: UILabel!
     @IBOutlet weak var submitDate: UIButton!
+    @IBOutlet weak var numberCounter: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
 
-    let realm = try! Realm()
+    @IBOutlet weak var secondsButton: UIButton!
+    @IBOutlet weak var minutesButton: UIButton!
+    @IBOutlet weak var hoursButton: UIButton!
+    @IBOutlet weak var daysButton: UIButton!
     
+    @IBOutlet var buttonView: UIView!
+    @IBOutlet var buttonViewWidth: NSLayoutConstraint!
+
+    @IBOutlet var buttonViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet var buttonViewTop: NSLayoutConstraint!
+    
+    @IBOutlet var secondsButtonLeft: NSLayoutConstraint!
+    
+    @IBOutlet var submitDateTop: NSLayoutConstraint!
+    
+    @IBOutlet var submitDateLeft: NSLayoutConstraint!
+    
+    @IBOutlet var submitDateLabel: UILabel!
+    
+    @IBOutlet var barButtonView: UIView!
+    
+    
+    //persist stuff
+    let realm = try! Realm()
     var startDate: Date?
     
-    var numberCounter = UILabel()
     
+    //so that the right thing can be displayed
     var secondsPressed = false
     var minutesPressed = false
     var hoursPressed = false
     var daysPressed = true
     
-    var counterOriginalXPosition = 0
-    var dateLabelOriginalXPosition = 0
+    var fontReducer = FontReducer()
+    
+    var dateSet = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        barButtonView.alpha = 0
+        buttonView.layer.cornerRadius = buttonView.frame.size.height * 0.2
+        setButtonViewAlpha(alpha: 0)
+        daysLabel.alpha = 0
+        numberCounter.alpha = 0
+        submitDateLabel.alpha = 0
+        fontReducer.reduceLabelFontSize(label: numberCounter)
         numberCounter.alpha = 0
         daysLabel.alpha = 0
-        
-        
         datePicker.setValue(UIColor.white, forKey: "textColor")
-        
-        //view.backgroundColor = UIColor(colorLiteralRed: 0, green: 217, blue: 255, alpha: 1)
-        //numberCounter.backgroundColor = UIColor.red
-        numberCounter.text = ""
-        numberCounter.textColor = UIColor.white
-        numberCounter.numberOfLines = 0
-        numberCounter.textAlignment = .center
-        numberCounter.font = UIFont.systemFont(ofSize: 200, weight: UIFontWeightLight)
-        numberCounter.backgroundColor = UIColor.red
-        numberCounter.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(numberCounter)
-        
-       
-        numberCounter.adjustsFontSizeToFitWidth = true
-        numberCounter.minimumScaleFactor = 0.3
-        
-        let widthConstraint = NSLayoutConstraint(item: numberCounter, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 300)
-        let heightConstraint = NSLayoutConstraint(item: numberCounter, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 200)
-        var constraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[superview]-(<=1)-[label]",
-            options: NSLayoutFormatOptions.alignAllCenterX,
-            metrics: nil,
-            views: ["superview":view, "label":numberCounter])
-        
-        view.addConstraints(constraints)
-        
-        // Center vertically
-        constraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "H:[superview]-(<=1)-[label]",
-            options: NSLayoutFormatOptions.alignAllCenterY,
-            metrics: nil,
-            views: ["superview":view, "label":numberCounter])
-        
-        view.addConstraints(constraints)
-        
-        view.addConstraints([ widthConstraint, heightConstraint])
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
         
         let realmDate = realm.objects(RealmNumber.self)
         
-        
-        let bottomDayContraint = NSLayoutConstraint(item: daysLabel, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: numberCounter, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: -45)
-        
-        
-        
-        NSLayoutConstraint(item: daysLabel, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0).isActive = true
-        //daysLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        
-        view.addConstraint(bottomDayContraint)
-        
-        
-        //daysLabel.bottomAnchor = 1.0 * numberCounter.topAnchor + 15
-        
-        //let realmStartingDate = RealmNumber()
-        //realmStartingDate.startingTime = Date()
-        
-        
+ 
         if realmDate.count == 0 {
             datePicker.isHidden = false
-            
-        
+            dateSet = false
+ 
             
         } else {
             
@@ -109,27 +91,33 @@ class ViewController: UIViewController {
             let components = calendar.dateComponents([.day], from: startDate!, to: myDate)
             //print(components.second!)
             numberCounter.text = String(components.day!)
+            dateSet = true
         }
         
-        counterOriginalXPosition = Int(numberCounter.frame.origin.x)
-        dateLabelOriginalXPosition = Int(daysLabel.frame.origin.x)
-        
-        
-        
-        
- 
-        //_ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.count), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.count), userInfo: nil, repeats: true)
+    }
+    
+    
+    func moveTimeButtonsFoward(amountFoward: CGFloat) {
+        self.secondsButton.frame.origin.x += amountFoward
+        self.minutesButton.frame.origin.x += amountFoward
+        self.hoursButton.frame.origin.x += amountFoward
+        self.daysButton.frame.origin.x += amountFoward
+    }
+    
+    
+    func setButtonViewAlpha(alpha: CGFloat) {
+        secondsButton.alpha = alpha
+        minutesButton.alpha = alpha
+        hoursButton.alpha = alpha
+        daysButton.alpha = alpha
     }
     
     func count() {
         
-        
-        print(datePicker.date)
-        changeTime()
-        
-        
-        //print(components.second!)
-        
+        if dateSet == true {
+            changeTime()
+        }
     }
 
     
@@ -154,6 +142,7 @@ class ViewController: UIViewController {
             numberCounter.text = String(components4.day!)
             
         }
+        fontReducer.reduceLabelFontSize(label: numberCounter)
     }
     
     
@@ -161,80 +150,66 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func seconds(_ sender: Any) {
-        secondsPressed = true
-        minutesPressed = false
-        hoursPressed = false
-        daysPressed = false
-        changeTime()
-        
-    }
-    @IBAction func minutes(_ sender: Any) {
-        secondsPressed = false
-        minutesPressed = true
-        hoursPressed = false
-        daysPressed = false
-        changeTime()
-        
-    }
-    @IBAction func hours(_ sender: Any) {
-        secondsPressed = false
-        minutesPressed = false
-        hoursPressed = true
-        daysPressed = false
-        changeTime()
-        
-    }
-    @IBAction func days(_ sender: Any) {
-        secondsPressed = false
-        minutesPressed = false
-        hoursPressed = false
-        daysPressed = true
-        changeTime()
-        
-    }
+   
     
-    @IBOutlet weak var datePicker: UIDatePicker!
+    
     
     @IBAction func submitDatePressed(_ sender: Any) {
         
-        self.daysLabel.alpha = 0
-        self.numberCounter.alpha = 0    
+        dateSet = true
         
+        //save the number to realm
         let realmStartingDate = RealmNumber()
         realmStartingDate.startingTime = datePicker.date
-        // Persist your data easily
         try! realm.write {
             realm.add(realmStartingDate)
         }
+        
+        //set up the date
         startDate = realmStartingDate.startingTime
         let myDate = Date()
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.second], from: startDate!, to: myDate)
-        numberCounter.text = String(components.second!)
+        let components = calendar.dateComponents([.day], from: startDate!, to: myDate)
+        numberCounter.text = String(components.day!)
+        fontReducer.reduceLabelFontSize(label: numberCounter)
+
+        view.layoutSubviews()
         
-        //numberCounter.isHidden = false
-        //daysLabel.isHidden = false
-        //daysLabel.alpha = 0
-        //datePicker.isHidden = true
-        //submitDate.isHidden = true
-        
-        
-        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-            self.submitDate.frame.origin.y += 1000
-            self.datePicker.frame.origin.y -= 1000
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
             
-        }, completion: { (finished: Bool) in
-            UIView.animate(withDuration: 1, animations: {
-                self.daysLabel.alpha = 1
-                self.numberCounter.alpha = 1
+                self.barButtonView.alpha = 1
+                self.buttonView.frame.size.width = 241
+                self.buttonView.frame.size.height = 49
+                self.buttonView.frame.origin.y += 13
+                self.buttonView.frame.origin.x += 19.5
+                self.submitDate.alpha = 0
+                self.datePicker.alpha = 0
+ 
+            }, completion: {(finished: Bool) in
+                
+                self.buttonViewHeight.constant = 49
+                self.buttonViewWidth.constant = 241
+                self.buttonViewTop.constant = 33
+                self.moveTimeButtonsFoward(amountFoward: -250)
+                self.setButtonViewAlpha(alpha: 1)
+                self.view.layoutSubviews()
+                
+                UIView.animate(withDuration: 0.5, animations: {
+    
+                    self.moveTimeButtonsFoward(amountFoward: self.buttonsLRConstant)
+                    self.daysLabel.alpha = 1
+                    self.numberCounter.alpha = 1
+                    
+                }, completion: {(finished: Bool) in
+                    
+                    self.secondsButtonLeft.constant = 8
+                    self.view.layoutSubviews()
+                    
+                })
             })
-    })
-        
-        
-        
-      
     }
+    
+    
     
     
     @IBAction func resetPressed(_ sender: Any) {
@@ -242,18 +217,94 @@ class ViewController: UIViewController {
             realm.deleteAll()
         }
         
-        self.submitDate.frame.origin.y -= 1000
-        self.datePicker.frame.origin.y += 1000
+        view.layoutSubviews()
         
-        self.daysLabel.alpha = 0
-        self.numberCounter.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+            
+            self.barButtonView.alpha = 0
+            self.moveTimeButtonsFoward(amountFoward: -250)
+            self.datePicker.alpha = 0
+            self.daysLabel.alpha = 0
+            self.numberCounter.alpha = 0
+            
+            
+        }, completion: {(finished: Bool) in
+            
+            
+            self.setButtonViewAlpha(alpha: 0)
+            self.view.layoutSubviews()
+            //self.secondsButtonLeft.constant = -250
+            
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                
+                self.submitDate.alpha = 1
+                self.datePicker.alpha = 1
+                self.buttonView.frame.size.width = 280
+                self.buttonView.frame.size.height = 75
+                self.buttonView.frame.origin.y -= 13
+                self.buttonView.frame.origin.x -= 19.5
+                
+                
+            }, completion: {(finished: Bool) in
+                
+                
+                self.buttonViewWidth.constant = 280
+                self.buttonViewHeight.constant = 75
+                self.buttonViewTop.constant = 20
+                self.view.layoutSubviews()
+                
+            })
+        })
         
-        //numberCounter.isHidden = true
-        //daysLabel.isHidden = true
-        datePicker.isHidden = false
-        submitDate.isHidden = false
+        secondsPressed = false
+        minutesPressed = false
+        hoursPressed = false
+        daysPressed = true
         
-        print("pressed")
+        dateSet = false
+        
+
+    }
+    
+    @IBAction func secondsPressed(_ sender: Any) {
+        secondsPressed = true
+        minutesPressed = false
+        hoursPressed = false
+        daysPressed = false
+        changeTime()
+        
+        daysLabel.text = "Seconds Since"
+    }
+    
+    @IBAction func minutesPressed(_ sender: Any) {
+        secondsPressed = false
+        minutesPressed = true
+        hoursPressed = false
+        daysPressed = false
+        changeTime()
+        
+        daysLabel.text = "Minutes Since"
+    }
+    
+    @IBAction func hoursPressed(_ sender: Any) {
+        secondsPressed = false
+        minutesPressed = false
+        hoursPressed = true
+        daysPressed = false
+        changeTime()
+        
+        daysLabel.text = "Hours Since"
+    }
+    
+    @IBAction func daysPressed(_ sender: Any) {
+        secondsPressed = false
+        minutesPressed = false
+        hoursPressed = false
+        daysPressed = true
+        changeTime()
+        
+        daysLabel.text = "Days Since"
     }
     
 
