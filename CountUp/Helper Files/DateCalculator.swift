@@ -41,7 +41,7 @@ class DateCalculator {
             }
             
         } else {
-            guard var minutes = calendar.dateComponents([.minute], from: newCompareDate, to: currentDate).minute else { fatalError() }
+            guard let minutes = calendar.dateComponents([.minute], from: newCompareDate, to: currentDate).minute else { fatalError() }
             guard var years = calendar.dateComponents([.year], from: newCompareDate, to: currentDate).year else { fatalError() }
             
             let timeDifferenceType: TimeDifferenceType = minutes < 0 ? .future : .past

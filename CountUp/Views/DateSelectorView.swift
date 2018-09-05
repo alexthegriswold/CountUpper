@@ -36,7 +36,7 @@ class DateSelectorView: UIView {
         button.setTitleColor(SystemColors().main, for: .normal)
         button.setTitleColor(.white, for: .highlighted)
         button.setTitle("Submit Date", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: UIFontWeightMedium)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: UIFont.Weight.medium)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

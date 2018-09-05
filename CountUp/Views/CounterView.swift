@@ -14,7 +14,7 @@ class CounterView: UIView {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 60, weight: UIFontWeightMedium)
+        label.font = UIFont.systemFont(ofSize: 60, weight: UIFont.Weight.medium)
         label.adjustsFontSizeToFitWidth = true
         label.baselineAdjustment = .alignCenters
         label.minimumScaleFactor = 0.60
@@ -29,7 +29,7 @@ class CounterView: UIView {
         let label = UILabel()
         label.text = "69"
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 200, weight: UIFontWeightThin)
+        label.font = UIFont.systemFont(ofSize: 200, weight: UIFont.Weight.thin)
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
         label.baselineAdjustment = .alignCenters
@@ -72,7 +72,7 @@ class CounterView: UIView {
         let button = UIButton()
         button.setTitleColor(SystemColors().main, for: .normal)
         button.setTitleColor(.white, for: .highlighted)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: UIFontWeightMedium)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: UIFont.Weight.medium)
         button.setTitle("New Date", for: .normal)
         button.backgroundColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -124,7 +124,11 @@ class CounterView: UIView {
         buttonsContainer.centerYAnchor.constraint(equalTo: buttonsView.centerYAnchor).isActive = true
         
         resetButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        resetButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            resetButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+        } else {
+            resetButton.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        }
         resetButton.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         resetButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         

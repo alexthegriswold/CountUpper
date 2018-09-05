@@ -12,13 +12,11 @@
 		50352B7D212F91F6001DF09A /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B7C212F91F6001DF09A /* CounterViewController.swift */; };
 		50352B7F212F92A2001DF09A /* TimeDeltaButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B7E212F92A2001DF09A /* TimeDeltaButtonType.swift */; };
 		50352B81212F92CE001DF09A /* TimeDeltaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B80212F92CE001DF09A /* TimeDeltaButton.swift */; };
-		5041A1AE1F2547AF00AB6056 /* FontReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041A1AD1F2547AF00AB6056 /* FontReducer.swift */; };
 		50470B1D213071CB009043BB /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50470B1C213071CB009043BB /* DateCalculator.swift */; };
 		50470B1F213072C0009043BB /* TimeDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50470B1E213072C0009043BB /* TimeDifference.swift */; };
 		50470B2121308254009043BB /* TitleStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50470B2021308254009043BB /* TitleStringFormatter.swift */; };
 		5053975A213F3DA1002CFDFE /* DateSelectorAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50539759213F3DA1002CFDFE /* DateSelectorAnimationController.swift */; };
 		5070D03D1F1BC04100CE7E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */; };
-		5070D03F1F1BC04100CE7E90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D03E1F1BC04100CE7E90 /* ViewController.swift */; };
 		5070D0421F1BC04100CE7E90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070D0401F1BC04100CE7E90 /* Main.storyboard */; };
 		5070D0441F1BC04100CE7E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5070D0431F1BC04100CE7E90 /* Assets.xcassets */; };
 		5070D0471F1BC04100CE7E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070D0451F1BC04100CE7E90 /* LaunchScreen.storyboard */; };
@@ -53,14 +51,12 @@
 		50352B7C212F91F6001DF09A /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		50352B7E212F92A2001DF09A /* TimeDeltaButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDeltaButtonType.swift; sourceTree = "<group>"; };
 		50352B80212F92CE001DF09A /* TimeDeltaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDeltaButton.swift; sourceTree = "<group>"; };
-		5041A1AD1F2547AF00AB6056 /* FontReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontReducer.swift; sourceTree = "<group>"; };
 		50470B1C213071CB009043BB /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
 		50470B1E213072C0009043BB /* TimeDifference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDifference.swift; sourceTree = "<group>"; };
 		50470B2021308254009043BB /* TitleStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleStringFormatter.swift; sourceTree = "<group>"; };
 		50539759213F3DA1002CFDFE /* DateSelectorAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorAnimationController.swift; sourceTree = "<group>"; };
 		5070D0391F1BC04100CE7E90 /* CountUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5070D03E1F1BC04100CE7E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5070D0411F1BC04100CE7E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5070D0431F1BC04100CE7E90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5070D0461F1BC04100CE7E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,7 +111,6 @@
 		50352B78212F8CD8001DF09A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5070D03E1F1BC04100CE7E90 /* ViewController.swift */,
 				50352B7C212F91F6001DF09A /* CounterViewController.swift */,
 				50A20677212E10F0001500CC /* DateSelectorViewController.swift */,
 			);
@@ -125,7 +120,7 @@
 		50352B79212F8CE8001DF09A /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
-				5041A1AD1F2547AF00AB6056 /* FontReducer.swift */,
+				50470B1E213072C0009043BB /* TimeDifference.swift */,
 				50352B76212F8C23001DF09A /* SystemColors.swift */,
 				50352B7E212F92A2001DF09A /* TimeDeltaButtonType.swift */,
 				50470B1C213071CB009043BB /* DateCalculator.swift */,
@@ -194,7 +189,6 @@
 				5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */,
 				5070D0431F1BC04100CE7E90 /* Assets.xcassets */,
 				5070D0481F1BC04100CE7E90 /* Info.plist */,
-				50470B1E213072C0009043BB /* TimeDifference.swift */,
 			);
 			path = CountUp;
 			sourceTree = "<group>";
@@ -289,23 +283,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = com.example;
 				TargetAttributes = {
 					5070D0381F1BC04000CE7E90 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = D5V9DEDBX9;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					5070D04C1F1BC04100CE7E90 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = D5V9DEDBX9;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5070D0381F1BC04000CE7E90;
 					};
 					5070D0571F1BC04100CE7E90 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = D5V9DEDBX9;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5070D0381F1BC04000CE7E90;
 					};
@@ -384,11 +381,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5070D03F1F1BC04100CE7E90 /* ViewController.swift in Sources */,
 				50470B2121308254009043BB /* TitleStringFormatter.swift in Sources */,
 				50470B1D213071CB009043BB /* DateCalculator.swift in Sources */,
 				50A20678212E10F0001500CC /* DateSelectorViewController.swift in Sources */,
-				5041A1AE1F2547AF00AB6056 /* FontReducer.swift in Sources */,
 				50352B75212F8BA2001DF09A /* DateSelectorView.swift in Sources */,
 				50470B1F213072C0009043BB /* TimeDifference.swift in Sources */,
 				5070D03D1F1BC04100CE7E90 /* AppDelegate.swift in Sources */,
@@ -461,15 +456,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -498,6 +501,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -511,15 +515,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -540,6 +552,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -552,11 +565,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = CountUp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -568,11 +582,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = CountUp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -587,7 +602,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountUp.app/CountUp";
 			};
 			name = Debug;
@@ -602,7 +618,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountUp.app/CountUp";
 			};
 			name = Release;
@@ -616,7 +633,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CountUp;
 			};
 			name = Debug;
@@ -630,7 +648,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CountUp;
 			};
 			name = Release;

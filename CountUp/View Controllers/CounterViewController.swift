@@ -64,7 +64,7 @@ class CounterViewController: UIViewController, CounterViewDelegate, TimeDeltaBut
         counterView.resetView(title: titleString, number: String(valueToDisplay))
     }
     
-    func checkIfNumberLabelNeedsToChange() {
+    @objc func checkIfNumberLabelNeedsToChange() {
         let valueToDisplay = convertSecondsToCurrentTimeDelta()
         counterView.resetTime(number: String(valueToDisplay))
     }
