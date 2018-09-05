@@ -7,12 +7,9 @@
 //
 
 import UIKit
-import RealmSwift 
 
 class ViewController: UIViewController {
-    
-    
-    
+
     var buttonsLRConstant = CGFloat(250)
     
    //UIStuff
@@ -43,9 +40,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var barButtonView: UIView!
     
-    
-    //persist stuff
-    let realm = try! Realm()
     var startDate: Date?
     
     
@@ -59,44 +53,33 @@ class ViewController: UIViewController {
     
     var dateSet = false
     
+    var intSeconds = 0
+    var intMinutes = 0
+    var intHours = 0
+    var intDays = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        barButtonView.alpha = 0
+        daysLabel.text = "Days Since"
+        
         buttonView.layer.cornerRadius = buttonView.frame.size.height * 0.2
+        fontReducer.reduceLabelFontSize(label: numberCounter)
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        
+        
+        barButtonView.alpha = 0
         setButtonViewAlpha(alpha: 0)
         daysLabel.alpha = 0
         numberCounter.alpha = 0
         submitDateLabel.alpha = 0
-        fontReducer.reduceLabelFontSize(label: numberCounter)
-        numberCounter.alpha = 0
-        daysLabel.alpha = 0
-        datePicker.setValue(UIColor.white, forKey: "textColor")
-        
-        let realmDate = realm.objects(RealmNumber.self)
-        
- 
-        if realmDate.count == 0 {
-            datePicker.isHidden = false
-            dateSet = false
- 
-            
-        } else {
-            
-            startDate = realmDate[0].startingTime
-            print(realmDate[0].startingTime)
-            let myDate = Date()
-            let calendar = Calendar.current
-            let components = calendar.dateComponents([.day], from: startDate!, to: myDate)
-            //print(components.second!)
-            numberCounter.text = String(components.day!)
-            dateSet = true
-        }
+    
+        datePicker.isHidden = false
+        dateSet = false
         
         _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.count), userInfo: nil, repeats: true)
     }
-    
     
     func moveTimeButtonsFoward(amountFoward: CGFloat) {
         self.secondsButton.frame.origin.x += amountFoward
@@ -105,6 +88,11 @@ class ViewController: UIViewController {
         self.daysButton.frame.origin.x += amountFoward
     }
     
+    func count() {        
+        if secondsPressed {
+            changeTime()
+        }
+    }
     
     func setButtonViewAlpha(alpha: CGFloat) {
         secondsButton.alpha = alpha
@@ -113,13 +101,7 @@ class ViewController: UIViewController {
         daysButton.alpha = alpha
     }
     
-    func count() {
-        
-        if dateSet == true {
-            changeTime()
-        }
-    }
-
+    //this needs to be changed to allow for the safe calculating of dates 
     
     func changeTime() {
         let myDate = Date()
@@ -146,30 +128,60 @@ class ViewController: UIViewController {
     }
     
     
+    func divideTime() {
+        let calendar = Calendar.current
+        let yearsComponent = calendar.dateComponents([.year], from: startDate!)
+       
+        var myDate = startDate
+        var date50Year = Date()
+
+        var amountOfYears = yearsComponent.year
+        
+        print(amountOfYears)
+        
+        while amountOfYears! < 1975 {
+            
+            myDate = calendar.date(byAdding: .year , value: +50, to: myDate!)
+            amountOfYears! += 50
+            print("Int Version: ", amountOfYears!)
+            let newYearsComponent = calendar.dateComponents([.year], from: myDate!)
+            print("Date Version: ", newYearsComponent.year)
+        }
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
    
-    
-    
-    
     @IBAction func submitDatePressed(_ sender: Any) {
         
         dateSet = true
+       
+        let gregorian = Calendar(identifier: .gregorian)
+        let now = Date()
         
-        //save the number to realm
-        let realmStartingDate = RealmNumber()
-        realmStartingDate.startingTime = datePicker.date
-        try! realm.write {
-            realm.add(realmStartingDate)
-        }
-        
-        //set up the date
-        startDate = realmStartingDate.startingTime
+    
+        startDate = datePicker.date
         let myDate = Date()
         let calendar = Calendar.current
+        
+        divideTime()
+        
         let components = calendar.dateComponents([.day], from: startDate!, to: myDate)
+        
+        var newDate = calendar.date(bySetting: .hour, value: 0, of: startDate!)
+        newDate = calendar.date(bySetting: .minute, value: 0, of: newDate!)
+        newDate = calendar.date(bySetting: .second, value: 0, of: newDate!)
+        
+        
+        
+        let components3 = calendar.dateComponents([.hour], from: newDate!, to: myDate)
+        
+        print(components3)
+        
+        
         numberCounter.text = String(components.day!)
         fontReducer.reduceLabelFontSize(label: numberCounter)
 
@@ -213,9 +225,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func resetPressed(_ sender: Any) {
-        try! realm.write {
-            realm.deleteAll()
-        }
         
         view.layoutSubviews()
         
@@ -233,8 +242,6 @@ class ViewController: UIViewController {
             
             self.setButtonViewAlpha(alpha: 0)
             self.view.layoutSubviews()
-            //self.secondsButtonLeft.constant = -250
-            
             
             UIView.animate(withDuration: 0.5, animations: {
                 
@@ -257,6 +264,9 @@ class ViewController: UIViewController {
             })
         })
         
+        
+        
+        
         secondsPressed = false
         minutesPressed = false
         hoursPressed = false
@@ -266,6 +276,9 @@ class ViewController: UIViewController {
         
 
     }
+    
+    
+    
     
     @IBAction func secondsPressed(_ sender: Any) {
         secondsPressed = true

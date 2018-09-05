@@ -30,6 +30,8 @@ class FontReducer {
             label.font = UIFont.systemFont(ofSize: 64, weight: UIFontWeightThin)
         } else if characterCount == 10 {
             label.font = UIFont.systemFont(ofSize: 57, weight: UIFontWeightThin)
+        } else if characterCount == 11 {
+            label.font = UIFont.systemFont(ofSize: 50, weight: UIFontWeightThin)
         }
     }
 }

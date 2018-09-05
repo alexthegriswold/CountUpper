@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50352B75212F8BA2001DF09A /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B74212F8BA2001DF09A /* DateSelectorView.swift */; };
+		50352B77212F8C23001DF09A /* SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B76212F8C23001DF09A /* SystemColors.swift */; };
+		50352B7D212F91F6001DF09A /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B7C212F91F6001DF09A /* CounterViewController.swift */; };
+		50352B7F212F92A2001DF09A /* TimeDeltaButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B7E212F92A2001DF09A /* TimeDeltaButtonType.swift */; };
+		50352B81212F92CE001DF09A /* TimeDeltaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50352B80212F92CE001DF09A /* TimeDeltaButton.swift */; };
 		5041A1AE1F2547AF00AB6056 /* FontReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041A1AD1F2547AF00AB6056 /* FontReducer.swift */; };
+		50470B1D213071CB009043BB /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50470B1C213071CB009043BB /* DateCalculator.swift */; };
+		50470B1F213072C0009043BB /* TimeDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50470B1E213072C0009043BB /* TimeDifference.swift */; };
+		50470B2121308254009043BB /* TitleStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50470B2021308254009043BB /* TitleStringFormatter.swift */; };
+		5053975A213F3DA1002CFDFE /* DateSelectorAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50539759213F3DA1002CFDFE /* DateSelectorAnimationController.swift */; };
 		5070D03D1F1BC04100CE7E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */; };
 		5070D03F1F1BC04100CE7E90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D03E1F1BC04100CE7E90 /* ViewController.swift */; };
 		5070D0421F1BC04100CE7E90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070D0401F1BC04100CE7E90 /* Main.storyboard */; };
@@ -15,7 +24,8 @@
 		5070D0471F1BC04100CE7E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070D0451F1BC04100CE7E90 /* LaunchScreen.storyboard */; };
 		5070D0521F1BC04100CE7E90 /* CountUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D0511F1BC04100CE7E90 /* CountUpTests.swift */; };
 		5070D05D1F1BC04100CE7E90 /* CountUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070D05C1F1BC04100CE7E90 /* CountUpUITests.swift */; };
-		50972B021F1BC3440067B2CE /* RealmNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50972B011F1BC3440067B2CE /* RealmNumber.swift */; };
+		50A20678212E10F0001500CC /* DateSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20677212E10F0001500CC /* DateSelectorViewController.swift */; };
+		50A2067A212E111D001500CC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20679212E111D001500CC /* CounterView.swift */; };
 		994F88346B4854417EC38B0F /* Pods_CountUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF039A072477FE1CFD67735 /* Pods_CountUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +48,16 @@
 
 /* Begin PBXFileReference section */
 		03054B729A172645E4EC142C /* Pods-CountUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountUp/Pods-CountUp.release.xcconfig"; sourceTree = "<group>"; };
+		50352B74212F8BA2001DF09A /* DateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorView.swift; sourceTree = "<group>"; };
+		50352B76212F8C23001DF09A /* SystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColors.swift; sourceTree = "<group>"; };
+		50352B7C212F91F6001DF09A /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		50352B7E212F92A2001DF09A /* TimeDeltaButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDeltaButtonType.swift; sourceTree = "<group>"; };
+		50352B80212F92CE001DF09A /* TimeDeltaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDeltaButton.swift; sourceTree = "<group>"; };
 		5041A1AD1F2547AF00AB6056 /* FontReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontReducer.swift; sourceTree = "<group>"; };
+		50470B1C213071CB009043BB /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
+		50470B1E213072C0009043BB /* TimeDifference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDifference.swift; sourceTree = "<group>"; };
+		50470B2021308254009043BB /* TitleStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleStringFormatter.swift; sourceTree = "<group>"; };
+		50539759213F3DA1002CFDFE /* DateSelectorAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorAnimationController.swift; sourceTree = "<group>"; };
 		5070D0391F1BC04100CE7E90 /* CountUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5070D03E1F1BC04100CE7E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +71,8 @@
 		5070D0581F1BC04100CE7E90 /* CountUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070D05C1F1BC04100CE7E90 /* CountUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpUITests.swift; sourceTree = "<group>"; };
 		5070D05E1F1BC04100CE7E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50972B011F1BC3440067B2CE /* RealmNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNumber.swift; sourceTree = "<group>"; };
+		50A20677212E10F0001500CC /* DateSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorViewController.swift; sourceTree = "<group>"; };
+		50A20679212E111D001500CC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		DAB54E81E3728B196DDDAC65 /* Pods-CountUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountUp/Pods-CountUp.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF039A072477FE1CFD67735 /* Pods_CountUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +112,55 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		50352B78212F8CD8001DF09A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5070D03E1F1BC04100CE7E90 /* ViewController.swift */,
+				50352B7C212F91F6001DF09A /* CounterViewController.swift */,
+				50A20677212E10F0001500CC /* DateSelectorViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		50352B79212F8CE8001DF09A /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				5041A1AD1F2547AF00AB6056 /* FontReducer.swift */,
+				50352B76212F8C23001DF09A /* SystemColors.swift */,
+				50352B7E212F92A2001DF09A /* TimeDeltaButtonType.swift */,
+				50470B1C213071CB009043BB /* DateCalculator.swift */,
+				50470B2021308254009043BB /* TitleStringFormatter.swift */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		50352B7A212F8D01001DF09A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50352B74212F8BA2001DF09A /* DateSelectorView.swift */,
+				50A20679212E111D001500CC /* CounterView.swift */,
+				50352B80212F92CE001DF09A /* TimeDeltaButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50352B7B212F8D0D001DF09A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5070D0451F1BC04100CE7E90 /* LaunchScreen.storyboard */,
+				5070D0401F1BC04100CE7E90 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		50539758213F3D7A002CFDFE /* Animated Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				50539759213F3DA1002CFDFE /* DateSelectorAnimationController.swift */,
+			);
+			path = "Animated Transitions";
+			sourceTree = "<group>";
+		};
 		5070D0301F1BC04000CE7E90 = {
 			isa = PBXGroup;
 			children = (
@@ -117,14 +186,15 @@
 		5070D03B1F1BC04100CE7E90 /* CountUp */ = {
 			isa = PBXGroup;
 			children = (
+				50539758213F3D7A002CFDFE /* Animated Transitions */,
+				50352B7B212F8D0D001DF09A /* Storyboards */,
+				50352B7A212F8D01001DF09A /* Views */,
+				50352B79212F8CE8001DF09A /* Helper Files */,
+				50352B78212F8CD8001DF09A /* View Controllers */,
 				5070D03C1F1BC04100CE7E90 /* AppDelegate.swift */,
-				5070D03E1F1BC04100CE7E90 /* ViewController.swift */,
-				5041A1AD1F2547AF00AB6056 /* FontReducer.swift */,
-				50972B011F1BC3440067B2CE /* RealmNumber.swift */,
-				5070D0401F1BC04100CE7E90 /* Main.storyboard */,
 				5070D0431F1BC04100CE7E90 /* Assets.xcassets */,
-				5070D0451F1BC04100CE7E90 /* LaunchScreen.storyboard */,
 				5070D0481F1BC04100CE7E90 /* Info.plist */,
+				50470B1E213072C0009043BB /* TimeDifference.swift */,
 			);
 			path = CountUp;
 			sourceTree = "<group>";
@@ -166,8 +236,6 @@
 				5070D0351F1BC04000CE7E90 /* Sources */,
 				5070D0361F1BC04000CE7E90 /* Frameworks */,
 				5070D0371F1BC04000CE7E90 /* Resources */,
-				0C78B79A02E1A4F03270E0C5 /* [CP] Embed Pods Frameworks */,
-				4DC93B72B05F539E2EA04E35 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,49 +359,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C78B79A02E1A4F03270E0C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountUp/Pods-CountUp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		410A510F0EC3F1315D69C21D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CountUp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4DC93B72B05F539E2EA04E35 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountUp/Pods-CountUp-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -344,9 +385,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5070D03F1F1BC04100CE7E90 /* ViewController.swift in Sources */,
+				50470B2121308254009043BB /* TitleStringFormatter.swift in Sources */,
+				50470B1D213071CB009043BB /* DateCalculator.swift in Sources */,
+				50A20678212E10F0001500CC /* DateSelectorViewController.swift in Sources */,
 				5041A1AE1F2547AF00AB6056 /* FontReducer.swift in Sources */,
-				50972B021F1BC3440067B2CE /* RealmNumber.swift in Sources */,
+				50352B75212F8BA2001DF09A /* DateSelectorView.swift in Sources */,
+				50470B1F213072C0009043BB /* TimeDifference.swift in Sources */,
 				5070D03D1F1BC04100CE7E90 /* AppDelegate.swift in Sources */,
+				50352B81212F92CE001DF09A /* TimeDeltaButton.swift in Sources */,
+				50352B7D212F91F6001DF09A /* CounterViewController.swift in Sources */,
+				5053975A213F3DA1002CFDFE /* DateSelectorAnimationController.swift in Sources */,
+				50352B77212F8C23001DF09A /* SystemColors.swift in Sources */,
+				50A2067A212E111D001500CC /* CounterView.swift in Sources */,
+				50352B7F212F92A2001DF09A /* TimeDeltaButtonType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = CountUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D5V9DEDBX9;
 				INFOPLIST_FILE = CountUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexGriswold.CountUpper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
