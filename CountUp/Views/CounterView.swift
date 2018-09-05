@@ -25,6 +25,16 @@ class CounterView: UIView {
         return label
     }()
     
+    let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
+        label.text = "JULY 24, 1996"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        return label
+    }()
+    
     let numberLabel: UILabel = {
         let label = UILabel()
         label.text = "69"
@@ -87,11 +97,11 @@ class CounterView: UIView {
     }()
   
     override init(frame: CGRect) {
+        
         super.init(frame: frame)
         
         backgroundColor = SystemColors().main
-        [buttonsView, titleLabel, numberLabel, resetButton, resetButtonBackground].forEach { addSubview($0) }
-        addSubview(buttonsView)
+        [buttonsView, titleLabel, subtitleLabel, numberLabel, resetButton, resetButtonBackground].forEach { addSubview($0) }
 
         timeDeltaButtons.forEach { buttonsContainer.addArrangedSubview($0) }
         
@@ -116,12 +126,23 @@ class CounterView: UIView {
         titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: numberLabel.topAnchor, constant: -20).isActive = true
         
+        subtitleLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        subtitleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
+        
         buttonsView.widthAnchor.constraint(equalToConstant: 280).isActive = true
         buttonsView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         buttonsView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         buttonsView.topAnchor.constraint(equalTo: centerYAnchor, constant: 130).isActive = true
-        buttonsContainer.centerXAnchor.constraint(equalTo: buttonsView.centerXAnchor).isActive = true
+        
+        
+        buttonsContainer.widthAnchor.constraint(equalToConstant: 260).isActive = true
+        buttonsContainer.heightAnchor.constraint(equalTo: buttonsView.heightAnchor).isActive = true
         buttonsContainer.centerYAnchor.constraint(equalTo: buttonsView.centerYAnchor).isActive = true
+        buttonsContainer.centerXAnchor.constraint(equalTo: buttonsView.centerXAnchor).isActive = true
+        
+        
+        
         
         resetButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         if #available(iOS 11.0, *) {
@@ -137,6 +158,10 @@ class CounterView: UIView {
         resetButtonBackground.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         resetButtonBackground.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
  
+    }
+    
+    func setDateLabel(dateString: String) {
+        subtitleLabel.text = dateString
     }
  
     func resetView(title: String, number: String) {

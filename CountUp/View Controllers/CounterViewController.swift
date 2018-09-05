@@ -20,10 +20,13 @@ class CounterViewController: UIViewController, CounterViewDelegate, TimeDeltaBut
     
     var currentTimeDelta: TimeDeltaButtonType = .day
     
+    
     init(compareDate: Date) {
         self.compareDate = compareDate
         super.init(nibName: nil, bundle: nil)
         
+        let dateString = formatDateString(date: compareDate)
+        counterView.setDateLabel(dateString: dateString)
         setCounterViewValues(timeDelta: .day)
         counterView.timeDeltaButtons.forEach { $0.delegate = self }
     }
@@ -82,6 +85,17 @@ class CounterViewController: UIViewController, CounterViewDelegate, TimeDeltaBut
         case .day:
             return UInt64(floor(Double(seconds/86400)))
         }
+    }
+    
+    func formatDateString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        dateFormatter.locale = Locale(identifier: "en_US")
+        
+        let stringDate = dateFormatter.string(from: date)
+        return stringDate.uppercased()
     }
     
     func didTapTimeDeltaButton(timeDelta: TimeDeltaButtonType) {

@@ -34,6 +34,7 @@ class DateSelectorAnimationController: NSObject, UIViewControllerAnimatedTransit
             
             if self.presenting {
                 toView.alpha = 1.0
+
             } else {
                 fromView.alpha = 0.0
             }

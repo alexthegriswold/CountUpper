@@ -23,6 +23,7 @@ class DateSelectorViewController: UIViewController, SubmitButtonDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        dateSelectorView.dateSelector.date = Date()
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
